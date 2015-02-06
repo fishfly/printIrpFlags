@@ -20,12 +20,13 @@ def main():
 
 	flag_str_bin = dec2bin(flag_dec)
 
-	print 'Binary: ' + flag_str_bin
-
 	length = len(flag_str_bin)
 
 	if length > len(flags):
 		length = len(flags)
+		flag_str_bin = flag_str_bin[len(flag_str_bin)-length:]
+
+	print 'Binary: ' + flag_str_bin
 
 	print 'IrpFlags:'
 	for i in range(length):
